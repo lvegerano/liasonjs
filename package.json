@@ -1,0 +1,33 @@
+{
+  "name": "liason-js",
+  "version": "0.0.1",
+  "description": "Simple and lightweight ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvegerano/liasonjs.git"
+  },
+  "keywords": [
+    "orm",
+    "sql",
+    "pg",
+    "mysql",
+    "sqlite"
+  ],
+  "author": "Luis Vegerano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lvegerano/liasonjs/issues"
+  },
+  "homepage": "https://github.com/lvegerano/liasonjs#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "knex": "^0.11.7",
+    "lodash": "^4.13.1",
+    "pg": "^6.0.0",
+    "pluralize": "^2.0.0"
+  }
+}
