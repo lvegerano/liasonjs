@@ -35,6 +35,9 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+# All intellij
+./idea
+
 # Optional REPL history
 .node_repl_history
 ### JetBrains template
