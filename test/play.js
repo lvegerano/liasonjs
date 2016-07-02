@@ -3,7 +3,7 @@ const schemaConstructor = require('../lib/schemaConstructor');
 
 const dbOptions = {
   client: 'pg',
-  // debug: true,
+  debug: true,
   connection: {
     port     : 5433,
     host     : '192.168.99.100',
@@ -29,20 +29,35 @@ const User = schema.define('User', {
 
 const newUser = new User();
 
-newUser.create([
-  {
-    name: 'Jon Anderson',
-    age: 65,
-  }, {
-    name: 'Alyssa Vegerano',
-    age: 30,
-  }
-]).then((recordId) => {
-  console.log(recordId);
-}).catch((err) => {
-  console.log(err && err.stack || err);
-});
 
+// newUser.create([
+//   {
+//     name: 'Luis Vegerano',
+//     age: 36,
+//   }, {
+//     name: 'Jon Anderson',
+//     age: 65,
+//   }, {
+//     name: 'Alyssa Vegerano',
+//     age: 30,
+//   }
+// ]).then((records) => {
+//   console.log(records);
+// }).catch((err) => {
+//   console.log(err && err.stack || err);
+// });
+
+// newUser.findById(1).then((record) => {
+//   console.log(record);
+// });
+
+
+newUser.findOne({
+  where: ['name', 'ilike', 'Luis%'],
+  andWhere: ['age', '>', 30]
+}).then((record) => {
+  console.log('record', record);
+});
 // const Comment = schema.define('Comments', {
 //   id: 'increments',
 //   comment: 'text'
