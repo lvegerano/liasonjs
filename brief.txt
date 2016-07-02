@@ -1,0 +1,27 @@
+Purpose for the lib
+
+There are a few ORM out there and for me they seem extremely bloated and try to achieve a lot. This lib aims to be simple
+to use and feel very intuitive to the user.
+
+The lib will do some of the thinking for the user and will be flexible where needed.
+
+Each method will have one way of doing things.
+
+A user should be able to:
+
+1. create a schema
+2. define indexes
+2. define a model
+3. define relationships
+4. perform CRUD operations
+
+MVP 
+
+schema
+indexes
+model
+CRUD
+
+Later
+
+Native Upserts
