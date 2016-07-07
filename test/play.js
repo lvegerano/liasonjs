@@ -29,6 +29,23 @@ const User = schema.define('User', {
 
 const newUser = new User();
 
+newUser.update({ age: 55 }, null, 1)/*.then((record) => {
+  console.log(record);
+})*/;
+
+// newUser.find({
+//   where: ['age', '>', 30]
+// }, {
+//   offset: 1,
+//   orderBy: {
+//     column: 'age',
+//     direction: 'desc',
+//   },
+//  limit: 1,
+// }, ['name', 'age']).then((records) => {
+//   console.log(records);
+// });
+
 
 // newUser.create([
 //   {
@@ -52,12 +69,13 @@ const newUser = new User();
 // });
 
 
-newUser.findOne({
-  where: ['name', 'ilike', 'Luis%'],
-  andWhere: ['age', '>', 30]
-}).then((record) => {
-  console.log('record', record);
-});
+// newUser.findOne({
+//   where: ['name', 'ilike', 'Luis%'],
+//   andWhere: ['age', '>', 30]
+// }).then((record) => {
+//   console.log('record', record);
+// });
+
 // const Comment = schema.define('Comments', {
 //   id: 'increments',
 //   comment: 'text'
